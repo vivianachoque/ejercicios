@@ -1,0 +1,34 @@
+<html doctype>
+    <head>
+<style>
+    .principal {
+        position: relative;
+        background: green; 
+        height: 100px;
+        width: 100px;
+    
+    }
+
+    .principal::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: 1px solid black;
+        position: absolute;
+        top: -4px;
+        z-idenx: -1;
+        left: -4px;
+        transition: top 0.3s ease, left 0.3s ease;
+    }
+
+    .principal:hover::before{
+     top: 4px;
+     left: 4px; 
+    }
+        </style>
+    </head>
+    <body>
+        <div class="principal"></div>
+    </body>
+</html>
